@@ -37,8 +37,9 @@ optional arguments:
 
 ![](samples/shapes.png)  
 ```bash
+# ~/pymaid_dir/
 > python3 pymaid samples/shapes.py
-> cat out.md
+# out.md
 classDiagram
   Point3D --o float
   Shape3D <|-- Triangle
@@ -46,7 +47,8 @@ classDiagram
   Line3D --o Point3D
   Line3D <|-- Polyline
   Line3D <|-- BezierCurve
-... 
+...
+
 ```
 
 ## Limitations
