@@ -168,14 +168,15 @@ def get_class_name(cls):
 
 def parse_args(args):
     arg_parser = argparse.ArgumentParser(description="PyMaid version 0.0.1")
+    # arg_parser.usage = "pymaid -i <input> -o <output>"
     arg_parser.add_argument(
-        "--input", "-i", help="Input file or glob", required=True, metavar=''
+        "-i", "--input", help="Input file or glob", required=True, metavar=''
     )
     arg_parser.add_argument(
-        "--output", "-o", help="Output file to write to", default="out.md",metavar=''
+        "-o", "--output", help="Output file to write to", default="out.md",metavar=''
     )
     arg_parser.usage = arg_parser.format_help()
-    return arg_parser.parse_args(args)
+    return arg_parser.parse_args()
 
 def run():
     opts = parse_args(sys.argv[1:])
