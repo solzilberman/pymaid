@@ -1,12 +1,12 @@
 # PyMaid
 
 ## What is this?
-PyMaid is a tool to automatically generate MermaidJS class diagrams from python3 source code. PyMaid uses the native `ast` module to parse a raw text stream of `.py` files and generate the proper syntax for MermaidJS [class diagrams](https://mermaid.js.org/syntax/classDiagram.html). 
+PyMaid is a tool to automatically generate MermaidJS class diagrams from `python3` source code. PyMaid uses the native `ast` module to parse a raw text stream of `.py` files and generate the proper syntax for MermaidJS [class diagrams](https://mermaid.js.org/syntax/classDiagram.html). 
 
 *Please Note: PyMaid is a work in progress and is not yet ready for production use.* 
 
 ## Details
-This tool was created to get a quick visual representation of `python3` codebases. We are open to contributions and feature requests. We aim to keep PyMaid simple and portable by having 0 external dependencies. 
+This tool was developed to be hackable and provide users with high-level visualizations of `python3` codebases. We are open to contributions and feature requests. 
 
 ## Setup & Installation
 ```bash
@@ -34,8 +34,6 @@ optional arguments:
 *Please Note: PyMaid is not yet packaged for pip installation. We intend to do this in the future.*
 
 ## Sample Usage
-
-![](samples/shapes.png)  
 ```bash
 # ~/pymaid_dir/
 > python3 pymaid samples/shapes.py
@@ -50,6 +48,9 @@ classDiagram
 ...
 
 ```
+*Rendered Mermaid Diagram:*
+
+![](samples/shapes.png)  
 
 ## Limitations
 PyMaid is still in development and has a few limitations:
@@ -58,3 +59,6 @@ PyMaid is still in development and has a few limitations:
 - Using the native `ast` module provides some robustness over a pattern-matching approach. However, more testing it needed to verify syntax coverage.
 
 Read more about MermaidJS [here](https://mermaid.js.org/). It is an excellent tool.
+
+### Alternatives:
+- [pyreverse](https://pylint.pycqa.org/en/latest/pyreverse.html) is a production grade tool that can generate UML diagrams of `python3` codebases and comes shipped with recent versions of `pylint`. If you need accurate UML digrams, use pyreverse.
