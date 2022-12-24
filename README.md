@@ -14,7 +14,7 @@ This tool was created to get a quick visual representation of `python3` codebase
 > python3 --version
 Python 3.8.3
 # clone repo
-> git clone <repo-url> pymaid_dir
+> git clone https://github.com/solzilberman/pymaid.git pymaid_dir
 > cd pymaid_dir
 ```
 
